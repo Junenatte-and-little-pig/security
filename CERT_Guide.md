@@ -1,6 +1,7 @@
 # The CERT Guide to Coordinated Vulnerability Disclosure
 ## Principles of Coordinates Vulnerability Disclosure
 漏洞披露的原则
+---
 ### Reduce Harm
 即使在漏洞不能被完全的除去的时候也有可能减少潜在的伤害，对于有漏洞的软件来说，减少伤害就是平衡防御系统在攻击者提高攻击技能时采取行动的能力
 ### Presume Benevolence
@@ -19,6 +20,9 @@
 #### Ethics in Related Professional Societies
 #### Journalism Ethics
 ### Process Improvement
+技艺改进
 #### CVD and the Security Feedback Loop
+反馈循环
 #### Improving the CVD Process Itself
+改进进程本身
 ### CVD as a Wicked Problem
