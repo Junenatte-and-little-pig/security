@@ -5,15 +5,15 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 
 class ProcessAbtain {
-    boolean showProcess(String name) {
+    static boolean showProcess(String name) {
         ProcessBuilder pb = new ProcessBuilder("tasklist");
         Process p;
         try {
-            p = pb.start();
+            p = pb.start(); //创建任务管理进程
             BufferedReader out = new BufferedReader(new InputStreamReader(new BufferedInputStream(p.getInputStream()), Charset.forName("GB2312")));
             String ostr;
-            while ((ostr = out.readLine()) != null)
-                if (ostr.contains(name))
+            while ((ostr = out.readLine()) != null) //逐行读取进程列表
+                if (ostr.contains(name))    //查找目标进程
                     return true;
         } catch (IOException e) {
             e.printStackTrace();
