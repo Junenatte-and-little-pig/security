@@ -25,7 +25,7 @@ graph TB
     subgraph 发送端
         CA(HTTP数据)--HTTP报文-->CT(TCP首部+HTTP数据);
         CT--TCP首部-->CN(IP首部+TCP首部+HTTP数据);
-        CN---CH(以太网首部+IP首部+TCP首部+HTTP数据);
+        CN--以太网首部-->CH(以太网首部+IP首部+TCP首部+HTTP数据);
     end
     subgraph 接收端
         SA(HTTP数据)---ST(TCP首部+HTTP数据);
