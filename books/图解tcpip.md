@@ -151,7 +151,7 @@
 - 3.DHCP客户机发送DHCP请求包，使用提供包来通知想使用的设定
 - 4.DHCP服务器返回DHCP确认应答包，对于请求包的要求发出许可请求
 ### NAT(Network Address Translator 网络地址翻译器)
-
+&emsp;&emsp;在局部地区网中，设定私有IP地址，当与Internet连接的时候，再将其变换成全局IP地址。NAPT(Nerwork Address Ports Translator 网络地址端口翻译器)则是能用一个全局IP地址给多台主机使用以进行通信。
 ## TCP协议和UDP协议
 ## 路由控制协议
 ## 应用协议
