@@ -237,5 +237,16 @@
 &emsp;&emsp;BGP对整个Internet进行路由控制，对Intetnet中每一个AS分配一个号码，并使用这个号码进行路由控制，在AS内部选取代言者，由代言者进行具体的交换信息操作。
 ## 应用协议
 ### DNS(Domain Name System)
-&emsp;&emsp;域名采用分层结构，用层与层之间的关系构建域名，并且给每一层分配一个域名服务器，上层服务器知晓下层服务器的IP地址，所有服务器都是由根服务器出发，层层向下。
+&emsp;&emsp;域名采用分层结构，用层与层之间的关系构建域名，并且给每一层分配一个域名服务器，上层服务器知晓下层服务器的IP地址，所有服务器都是由根服务器出发，层层向下。  
+&emsp;&emsp;当一个主机要访问某一主机地址时，从当前DNS服务器层层向上进行查找是否有目标主机地址的信息，如果没找到就继续向上直到根服务器，找到了就向下查找目标主机地址，并返回到源主机，进行通信。  
+&emsp;&emsp;除此之外，DNS还管理一定的信息，记录主机地址的类别。
+### WWW(World Wide Web 万维网)
+&emsp;&emsp;一个将Internet上传输的信息以超文本的形式提供给用户浏览的系统。包含：
+- URL(Uniform Resource Locator)：访问信息的手段和位置
+- HTML(HyperText Markup Language)：信息的表现格式
+- HTTP(HyperText Transfer Protocol)：信息传输等操作
+### 电子邮件
+- 电子邮件地址：姓名@地址，根据地址以及DNS服务器中MX(Mail Exchange 电子邮件交换)记录找到目标服务器，由目标服务器进行管理
+- 数据形式：从早期单纯的文本形式，变成现如今使用的经过扩展的MIME(Multipurpose Internet Mail Extensions 多用途Internet邮件扩展)协议，可以在邮件中添加较为丰富的内容进行传输
+- 发送协议
 ## 物理层、传输介质和公众通信服务
