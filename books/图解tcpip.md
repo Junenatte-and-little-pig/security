@@ -185,7 +185,7 @@
 - 窗口的大小根据服务器提供的窗口更新通知动态确定，而对于要想获得窗口大小的发送端来说，可以主动发送窗口探测器进行询问
 - 拥塞控制是为了防止在通信过程中突然大量的数据传输而导致的通信阻塞问题，它采取了慢启动快启动结合的方法，通过阈值对窗口进行控制，减少网络拥挤的情况发生
 - 采用算法提高计算机网络利用率
-  + Negle算法：只有当发送完毕的数据都获得肯定确认应答且能够发送最大段长数据时，才进行发送，不然就延迟一段时间
+  + Nagle算法：只有当发送完毕的数据都获得肯定确认应答且能够发送最大段长数据时，才进行发送，不然就延迟一段时间
   + 延迟肯定确认应答：在重发超时内，推迟对收到的数据包的应答，从而释放空间，提高发送的效率
   + 捎带：将一些数据包和确认应答包一起发送，减少发送接收包的数目，加快速度
 ### 实时通信
@@ -249,4 +249,39 @@
 - 电子邮件地址：姓名@地址，根据地址以及DNS服务器中MX(Mail Exchange 电子邮件交换)记录找到目标服务器，由目标服务器进行管理
 - 数据形式：从早期单纯的文本形式，变成现如今使用的经过扩展的MIME(Multipurpose Internet Mail Extensions 多用途Internet邮件扩展)协议，可以在邮件中添加较为丰富的内容进行传输
 - 发送协议
+  + SMTP(Simple Mail Transfer Protocol 简单邮件传输协议)：发送邮件的应用协议，在建立TCP连接的基础上向服务器发送电子邮件，由客户端管理邮件
+  + POP(Post Office Protocol 邮局协议)：接收邮件的应用协议，同样建立在TCP连接基础上，由客户端管理邮件
+  + IMAP(Internet Message Access Protocol 因特网访问协议)：由服务器管理邮件
+### 远程登录协议TELNET
+&emsp;&emsp;利用TCP的一个连接实现远程登录对方主机并进行一定的操作。
+### FTP(File Transfer Protocol)
+&emsp;&emsp;利用TCP的两个连接实现文件的传输和控制。
+### NFS(Network File System 网络文件系统)
+&emsp;&emsp;用于在计算机网络所连接的计算机之间，共享硬盘上存储的文件而设计的。
+### 计算机网络管理
+- SNMP(Simple Network Management Protocol 简单网络管理协议)：由管理器去管理代理服务器来代替人的管理
+- MIB(Management Information Base 管理信息数据库)：树形结构的数据库，给各种各样的项目中赋予了相应的数字
+- RMON(Remote Monitering MIB 远程监控MIB)：监事连接计算机网络的线路
+### LDAP(Lightweight Directory Access Protocol 轻量级访问协议)
+&emsp;&emsp;安全、容易的访问计算机网络上的各种各样的服务
 ## 物理层、传输介质和公众通信服务
+&emsp;&emsp;连接计算机与网络的通信介质包括：
+- 同轴电缆
+- 双绞线电缆
+- 光导纤维电缆
+- 无线
+&emsp;&emsp;而与外部连接的公众通信服务主要有：
+- 模拟电话线路
+- ISDN(Integrated Services Digital Network 综合业务数字网)
+- 移动电话和PHS(Personal Handy-phone System 个人手持电话系统)
+- ADSL(Asymmetric Digital Subscriber Line 非对称数字租借线路)
+- 有线电视
+- 专用线路
+- X.25(公共包交换服务)
+- 帧中继
+- IP-VPN
+&emsp;&emsp;Internet的主要连接形式有：
+- 拨号上网连接
+- 不间断连接
+- 临时的IP地址和永久的IP地址
+- 使用NAT(NAPT)的Internet连接
